@@ -11,8 +11,8 @@ int main(void){
 
     int N,M;
     cin >> N >> M;
-    vector<vector<int> > A(N+1,vector<int>(N+1,0)); // 그냥배열
-    vector<vector<int> > D(N+1,vector<int>(N+1,0));//2차원동적배열을 선언한것이다.합배열
+    vector<vector<int> > A(N+1,vector<int>(N+1,0)); // 값이 들어간 배열(2차원동적배열을 선언한것이다)
+    vector<vector<int> > D(N+1,vector<int>(N+1,0));// 합배열
     //그전에 그냥 일차원배열을 사용했을때 사실 값을 그전꺼만 접근하면 됬어서 배열을 하나만 만들었다.하지만 2차원배열은 그전의 값을 접근을 다양한 인덱스에서 하기때문에 이차원배열에 꼭 저장해줘야한다.
 
     for(int i=1;i<=N;i++){
