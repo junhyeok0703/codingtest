@@ -2,7 +2,8 @@
 
 
 using namespace std;
-
+ 
+ //구간합 1차원배열
 int main(void){
 
     int num=0,why=0;

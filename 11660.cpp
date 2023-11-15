@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-
+// 구간합 2차원배열
 int main(void){
 
 
