@@ -1,34 +1,33 @@
-#include <iostream>
+// #include <iostream>
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    int N, M, J;
-    cin >> N >> M;
-    cin >> J;
-    int screen[N];
-    int basket[M];
-    int left, right = left + M - 1;
-    int totalDistance,apple;
-    for (int i = 0; i < J; ++i) {
-        
-        cin >> apple;
-        --apple; 
+// int main() {
+//     int N, M, J;
+//     cin >> N >> M;
+//     cin >> J;
 
-        if (apple < left) {
-            int diff = left - apple;
-            totalDistance += diff;
-            left -= diff;
-            right -= diff;
-        } else if (apple > right) {
-            int diff = apple - right;
-            totalDistance += diff;
-            right += diff;
-            left += diff;
-        }
-    }
+//     int left = 1, right = M;
+//     int totalDistance = 0, apple;
 
-    cout << totalDistance << endl;
+//     while (J--) {
+//         cin >> apple;
 
-    return 0;
-}
+//         while (left > apple || right < apple) {
+//             if (apple > right) {
+//                 right++;
+//                 totalDistance++;
+//                 left++;
+//             }
+//             if (apple < left) {
+//                 right--;
+//                 totalDistance++;
+//                 left--;
+//             }
+//         }
+//     }
+
+//     cout << totalDistance <<endl;
+
+//     return 0;
+// }

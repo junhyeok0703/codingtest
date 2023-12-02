@@ -6,8 +6,6 @@ using namespace std;
 
 int main(void){
 
-
-
     string mymbti;
     cin >> mymbti;
     int num;
