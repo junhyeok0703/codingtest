@@ -1,30 +1,33 @@
 #include <iostream>
-#include <string.h>
 #include <algorithm>
+#include <vector>
 using namespace std;
+int arr[2000];
 
-int main(void){
+int main() {
+    int num,result=0,val;
+    cin>>num;
+    for(int i=0;i<num;i++)
+        cin>>arr[i];
+    sort(arr,arr+num);
 
-    int N;
-    cin >> N;
-    
-    int* Array = new int[N];
-
-    for (int i = 0; i < N; ++i) {
-       cin >> Array[i];
-    }
-    sort(Array,Array+N);
-    
-  
-    int k =0;
-    for(int a =2;a<N;a++){
-        k=Array[a];
-        int i = 0;
-        int j = N-1;
-        while(i<j){
-            if(Array[+])
+    for(int i=0;i<num;i++){
+        val = arr[i];     //찾고자 하는 번호
+        int l=0,r=num-1,sum;
+        while(l<r){
+            sum = arr[l]+arr[r];
+            if(sum==val){ 
+                if(l!=i && r!=i){
+                    result++;
+                    break;
+                }
+                else if(l==i) l++;
+                else if(r==i) r--;
+            }
+            else if(sum<val) l++;
+            else r--;
         }
     }
-
-
+    cout<<result;
+    return 0;
 }
